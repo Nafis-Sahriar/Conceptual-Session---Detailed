@@ -5,6 +5,9 @@ import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import RootLayout from './layout/RootLayout.jsx';
+import AllApps from './Pages/Apps/AllApps.jsx';
+import Homepage from './Pages/Homepage/Homepage.jsx';
+import InstallApps from './Pages/Install/InstallApps.jsx';
 
 const router = createBrowserRouter([
   {
@@ -14,12 +17,19 @@ const router = createBrowserRouter([
     children:[
       {
         index: true,
-        element: <h2>Home Page</h2>
+        element: <Homepage></Homepage>
       },
       {
         path : "/apps",
-        element: <h1>All Apps</h1>
+        element: <AllApps></AllApps>
       }
+      ,
+      {
+        path: "/installed",
+        element: <InstallApps></InstallApps>
+      }
+
+
     ],
     errorElement: <h2>This page is not available. </h2>
   },
