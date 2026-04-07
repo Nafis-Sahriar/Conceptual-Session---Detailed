@@ -20,8 +20,11 @@ const router = createBrowserRouter([
         path : "/apps",
         element: <h1>All Apps</h1>
       }
-    ]
+    ],
+    errorElement: <h2>This page is not available. </h2>
   },
+
+  
 
 
 ]);
